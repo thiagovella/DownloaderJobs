@@ -1,0 +1,59 @@
+2017/01/30 07:20:26.787 [main] INFO  c.goiaba.DownloaderJobsApplication - Starting DownloaderJobsApplication on Mariri with PID 10548 (C:\dev\workspace\DownloaderJobs\target\classes started by Thiago in C:\dev\workspace\DownloaderJobs) 
+2017/01/30 07:20:26.796 [main] DEBUG c.goiaba.DownloaderJobsApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE 
+2017/01/30 07:20:26.797 [main] INFO  c.goiaba.DownloaderJobsApplication - No active profile set, falling back to default profiles: default 
+2017/01/30 07:20:26.916 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c7a06ec: startup date [Mon Jan 30 07:20:26 BRST 2017]; root of context hierarchy 
+2017/01/30 07:20:27.109 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final 
+2017/01/30 07:20:29.727 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f21847d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2017/01/30 07:20:30.627 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8181 (http) 
+2017/01/30 07:20:30.648 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat 
+2017/01/30 07:20:30.651 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6 
+2017/01/30 07:20:30.810 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2017/01/30 07:20:30.811 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3895 ms 
+2017/01/30 07:20:31.057 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/] 
+2017/01/30 07:20:31.063 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2017/01/30 07:20:31.064 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2017/01/30 07:20:31.064 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2017/01/30 07:20:31.064 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2017/01/30 07:20:31.769 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default' 
+2017/01/30 07:20:31.796 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2017/01/30 07:20:31.956 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final} 
+2017/01/30 07:20:31.958 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found 
+2017/01/30 07:20:31.961 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist 
+2017/01/30 07:20:32.054 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+2017/01/30 07:20:32.473 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect 
+2017/01/30 07:20:33.249 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2017/01/30 07:20:34.664 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/downloaderJobs/addJobFilters],methods=[POST]}" onto public java.lang.String com.goiaba.controller.JobController.addJobFilter(java.lang.Long,java.lang.Long[]) 
+2017/01/30 07:20:34.669 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/downloaderJobs/addJob],methods=[POST]}" onto public java.lang.String com.goiaba.controller.JobController.addJob(java.lang.String) 
+2017/01/30 07:20:34.671 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/downloaderJobs/getAllJobs],methods=[GET]}" onto public java.util.Collection<com.goiaba.model.JobEntity> com.goiaba.controller.JobController.getAllJobs() 
+2017/01/30 07:20:34.671 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/downloaderJobs/startJob],methods=[GET]}" onto public java.lang.String com.goiaba.controller.JobController.startJob(java.lang.Long) throws java.lang.Exception 
+2017/01/30 07:20:34.672 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/downloaderJobs/startAllJobs],methods=[GET]}" onto public java.lang.String com.goiaba.controller.JobController.startJobs() throws java.lang.Exception 
+2017/01/30 07:20:34.674 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest) 
+2017/01/30 07:20:34.680 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration() 
+2017/01/30 07:20:34.682 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration() 
+2017/01/30 07:20:34.683 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources() 
+2017/01/30 07:20:34.691 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2017/01/30 07:20:34.692 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2017/01/30 07:20:35.134 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c7a06ec: startup date [Mon Jan 30 07:20:26 BRST 2017]; root of context hierarchy 
+2017/01/30 07:20:35.218 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2017/01/30 07:20:35.219 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2017/01/30 07:20:35.281 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2017/01/30 07:20:35.642 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+2017/01/30 07:20:35.657 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647 
+2017/01/30 07:20:35.658 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed 
+2017/01/30 07:20:35.693 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s) 
+2017/01/30 07:20:35.730 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references 
+2017/01/30 07:20:36.025 [main] WARN  s.d.s.w.r.p.ParameterDataTypeReader - Trying to infer dataType java.lang.Long[] 
+2017/01/30 07:20:36.079 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing 
+2017/01/30 07:20:36.090 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8181"] 
+2017/01/30 07:20:36.107 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8181] 
+2017/01/30 07:20:36.124 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2017/01/30 07:20:36.160 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8181 (http) 
+2017/01/30 07:20:36.171 [main] INFO  c.goiaba.DownloaderJobsApplication - Started DownloaderJobsApplication in 10.093 seconds (JVM running for 10.696) 
+2017/01/30 07:20:55.557 [http-nio-8181-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2017/01/30 07:20:55.557 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+2017/01/30 07:20:55.584 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms 
+2017/01/30 07:20:55.656 [http-nio-8181-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory 
+2017/01/30 07:50:44.249 [http-nio-8181-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1366, SQLState: HY000 
+2017/01/30 07:50:44.250 [http-nio-8181-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Incorrect string value: '\xF0\x9F\x99\x88_2...' for column 'file_name' at row 1 

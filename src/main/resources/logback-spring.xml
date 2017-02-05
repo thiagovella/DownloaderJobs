@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- TODO: change log dir -->
+	<property name="LOG_ROOT_DIR" value="logs" />
+	<property name="LOG_HIST_DIR" value="logs/hist" />
+
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d{yyyy/MM/dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n
+			</Pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter>
+	</appender>
+
+	<appender name="applicationLog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${LOG_ROOT_DIR}/application.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<FileNamePattern>${LOG_HIST_DIR}/application.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyy/MM/dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n
+			</Pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="historyLog"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${LOG_ROOT_DIR}/history.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<FileNamePattern>${LOG_HIST_DIR}/history.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyy/MM/dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.goiaba" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="applicationLog" />
+	</logger>
+
+	<logger name="historyDownload" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="historyLog" />
+	</logger>
+	
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="applicationLog" />
+	</root>
+</configuration>
