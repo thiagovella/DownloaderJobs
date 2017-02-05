@@ -1,4 +1,0 @@
-2017/01/23 21:53:52.140 [main] INFO  c.goiaba.DownloaderJobsApplication - Starting DownloaderJobsApplication on Mariri with PID 2972 (C:\dev\workspace\DownloaderJobs\target\classes started by Thiago in C:\dev\workspace\DownloaderJobs) 
-2017/01/23 21:53:52.158 [main] DEBUG c.goiaba.DownloaderJobsApplication - Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.4.RELEASE 
-2017/01/23 21:53:52.158 [main] INFO  c.goiaba.DownloaderJobsApplication - No active profile set, falling back to default profiles: default 
-2017/01/23 21:54:07.434 [main] INFO  c.goiaba.DownloaderJobsApplication - Started DownloaderJobsApplication in 16.228 seconds (JVM running for 16.864) 
